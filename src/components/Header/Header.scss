@@ -1,0 +1,9 @@
+@import "./src/assets/constants/constants.scss";
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-between;
+    margin: 0 auto;
+}

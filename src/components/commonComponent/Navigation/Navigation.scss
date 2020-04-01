@@ -1,0 +1,25 @@
+@import "./src/assets/constants/constants.scss";
+
+.navigation {
+  display: flex;
+  margin-top: 6%;
+  font-family: $font;
+  margin-bottom: 50px;
+
+  .navigation_item {
+    margin-right: 30px;
+    
+    .navlink {
+      text-decoration: none;
+      font-size: 20px;
+      color: rgba(39,39,43,.85);
+      font-weight: 500;
+    }
+
+    .selected {
+      color: #ff9e0c;
+      padding-bottom: 3px;
+      border-bottom: 2px solid #ff9e0c;
+    }
+  }
+}
