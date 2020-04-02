@@ -6,7 +6,7 @@ const SearchComponent = () => (
     <h1>Search</h1>
     <div className={styles.wrapperSearch}>
       <span className={styles.findIcon} />
-      <input type="sarch" className={styles.searchInput} />
+      <input type="search" className={styles.searchInput} />
       <button type="button" className={styles.button}>Найти</button>
     </div>
   </main>

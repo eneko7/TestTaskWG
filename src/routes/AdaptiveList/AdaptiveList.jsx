@@ -1,9 +1,8 @@
 import React from 'react';
+import AdaptiveListComponent from '../../components/AdaptiveListComponent';
 
 const AdaptiveList = () => (
-  <>
-    AdaptiveList
-  </>
+  <AdaptiveListComponent />
 );
 
 export default AdaptiveList;
