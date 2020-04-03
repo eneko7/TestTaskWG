@@ -5,7 +5,7 @@
 
 import React, { Fragment, useState } from 'react';
 import styles from './AdaptiveListComponent.scss';
-import { games } from '../../utils/utils';
+import { games as list } from '../../utils/utils';
 
 const AdaptiveListComponent = () => {
   const [selectedValue, setValue] = useState('worldOfWarplanes');
@@ -15,31 +15,31 @@ const AdaptiveListComponent = () => {
     setValue(event.target.id);
   };
 
-  const chooseGame = (event) => {
-    setValue(event.target.getAttribute('data-game'));
+  const chooseItem = (event) => {
+    setValue(event.target.getAttribute('data-item'));
     setSelectOpen(false);
   };
 
-  const listOfGames = []; const selectOfGames = [];
+  const listOfItems = []; const selectOfItems = [];
 
-  Object.keys(games).forEach((el) => {
-    listOfGames.push(
+  Object.keys(list).forEach((el) => {
+    listOfItems.push(
       <Fragment key={`${el}list`}>
         <input
           type="radio"
-          name="game"
+          name="item"
           id={el}
-          value={games[el]}
+          value={list[el]}
           className={styles.inputRadio}
           checked={selectedValue === el}
           onChange={chooseRadio.bind(this)}
         />
-        <label className={styles.labelRadio} htmlFor={el}>{games[el]}</label>
+        <label className={styles.labelRadio} htmlFor={el}>{list[el]}</label>
       </Fragment>,
     );
-    selectOfGames.push(
+    selectOfItems.push(
       <Fragment key={`${el}select`}>
-        <span data-game={el} className={styles.option}>{games[el]}</span>
+        <span data-item={el} className={styles.option}>{list[el]}</span>
       </Fragment>,
     );
   });
@@ -48,20 +48,24 @@ const AdaptiveListComponent = () => {
     <main className={styles.mainContent}>
       <h1>Adaptive list</h1>
       <div className={styles.listWrapper}>
-        {listOfGames}
+        {listOfItems}
       </div>
       <div className={styles.selectWrapper}>
-        <span className={styles.menuIcon}>&#9776;</span>
-        <button
-          type="button"
-          className={styles.select}
-          onClick={() => setSelectOpen(!openSelect)}
-        >
-          {games[selectedValue]}
-        </button>
+        {!openSelect && (
+        <>
+          <span className={styles.menuIcon}>&#9776;</span>
+          <button
+            type="button"
+            className={styles.select}
+            onClick={() => setSelectOpen(!openSelect)}
+          >
+            {list[selectedValue]}
+          </button>
+        </>
+        )}
         {openSelect && (
-          <div className={styles.optionsWrapper} onClick={chooseGame.bind(this)}>
-            {selectOfGames}
+          <div className={styles.optionsWrapper} onClick={chooseItem.bind(this)}>
+            {selectOfItems}
           </div>
         )}
       </div>
