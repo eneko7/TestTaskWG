@@ -5,9 +5,15 @@
   margin: 0 auto;
   font-family: $font;
 
+  .wrapperSearchVariant {
+    width: 50%;
+  }
+
   .wrapperSearch {
     position: relative;
     display: flex;
+    width: 50%;
+    margin-bottom: 5px;
 
     .findIcon {
       width: 16px;
@@ -34,13 +40,19 @@
       margin-right: 7px;
       margin-top: 1px;
       padding-left: 37px;
+      padding-right: 10px;
       width: 100%;
+      text-overflow: ellipsis;
+
+      &::placeholder{
+        text-overflow: ellipsis;
+      }
     }
 
     .searchInput::-webkit-search-cancel-button {
       position: relative;
-      right: 11px;
       -webkit-appearance: none;
+      right: -5px;
       width: 18px;
       height: 18px;
       background-image: url(../../assets/images/del_icon.png);

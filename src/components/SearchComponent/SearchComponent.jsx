@@ -9,6 +9,11 @@ const SearchComponent = () => (
       <input type="search" className={styles.searchInput} />
       <button type="button" className={styles.button}>Найти</button>
     </div>
+    <div className={`${styles.wrapperSearch} ${styles.wrapperSearchVariant}`}>
+      <span className={styles.findIcon} />
+      <input type="search" className={styles.searchInput} />
+      <button type="button" className={styles.button}>Go</button>
+    </div>
   </main>
 );
 

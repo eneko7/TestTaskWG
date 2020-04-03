@@ -1,0 +1,98 @@
+@import "./src/assets/constants/constants.scss";
+
+*:focus {
+  outline: none;
+}
+
+.mainContent {
+  width: 70%;
+  margin: 0 auto;
+  font-family: $font;
+
+  .articleTitle{
+    font-size: 18px;
+    font-family: $font;
+    color: $fontColor;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+  
+  .articleTextWrapper {
+    -webkit-column-width: calc(50% - 23px);
+    -moz-column-width: calc(50% - 23px);
+    column-width: calc(50% - 23px);
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    -webkit-column-rule: 1px solid $fontColor;
+    -moz-column-rule: 1px solid $fontColor;
+    column-rule: 1px solid $fontColor;
+
+    p {
+      font-size: $fontSize;
+      font-family: $font;
+      color: $fontColor;
+      line-height: 1.286;
+      text-align: left;
+      text-indent: 16px;
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+
+    .olStyle {
+      padding-left: 0;
+      margin-top: 30px;
+      margin-left: 20px;
+
+      .pSpecilaStyle {
+        margin: 25px 0;
+      }
+
+      .olLiStyle {
+        font-size: $fontSize;
+        margin-bottom: 7px;
+        font-weight: bolder;
+        color: #222325;
+      }
+
+      .titleLi {
+        color: #222325;
+        font-size: $fontSize;
+        font-weight: normal;
+        margin-bottom: 10px;
+      }
+
+      .wrapper {
+        margin-left: -15px;
+
+        .ulStyle {
+          padding-left: 15px;
+
+          li {
+            font-size: $fontSize;
+            font-family: $font;
+            color: $fontColor;
+            line-height: 1.286;
+            text-align: left;
+            text-indent: 0px;
+            list-style-type: none;
+            margin-bottom: 5px;
+            font-weight: normal;
+
+            .iconLine {
+              margin-right: 10px;
+              font-size: $fontSize;
+              font-family: $font;
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}

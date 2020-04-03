@@ -1,9 +1,8 @@
 import React from 'react';
+import ArticleLayoutComponent from '../../components/ArticleLayoutComponent';
 
 const ArticleLayout = () => (
-  <>
-    ArticleLayout
-  </>
+  <ArticleLayoutComponent />
 );
 
 export default ArticleLayout;

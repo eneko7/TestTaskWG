@@ -7,7 +7,6 @@ import ArticleLayout from '../../routes/ArticleLayout';
 import Widget from '../../routes/Widget';
 import PageNotFound from '../../routes/PageNotFound';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import styles from './App.scss';
 
 const App = () => (
@@ -21,7 +20,6 @@ const App = () => (
       <Route exact path="/task4" component={Widget} />
       <Route path="*" component={PageNotFound} />
     </Switch>
-    <Footer />
   </main>
 
 );
