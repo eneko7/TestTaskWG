@@ -1,2 +1,25 @@
 @import "./src/assets/constants/constants.scss";
 
+.button {
+  width: 200px;
+  height: 45px;
+  background-color: $buttonColor;
+  font-family: $font;
+  font-size: $fontSize;
+  cursor: pointer;
+  color: $textWidgetColor;
+  margin-right: 30px;
+}
+
+.buttonClose {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: $textWidgetColor;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+

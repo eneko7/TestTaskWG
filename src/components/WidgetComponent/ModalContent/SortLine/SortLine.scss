@@ -1,0 +1,12 @@
+@import "./src/assets/constants/constants.scss";
+
+.sortLine {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .label {
+    padding-right: 20px;
+    color: $textWidgetColor;
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SearchComponent.scss';
 
 const SearchComponent = () => (
-  <main className={styles.mainContet}>
+  <main className={styles.mainContent}>
     <h1>Search</h1>
     <div className={styles.wrapperSearch}>
       <span className={styles.findIcon} />
