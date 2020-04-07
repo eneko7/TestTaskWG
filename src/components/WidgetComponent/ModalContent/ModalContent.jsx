@@ -1,3 +1,4 @@
+/* eslint-disable react/state-in-constructor */
 /* eslint-disable no-lonely-if */
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
@@ -67,7 +68,7 @@ class ModalContent extends Component {
     return (
       <div className={styles.modalContent}>
         <SortLine
-          onChange={event => this.onChangeHendler(event)}
+          onChange={(event) => this.onChangeHendler(event)}
           searchValue={searchValue}
           filterValue={filterValue}
         />
@@ -75,13 +76,12 @@ class ModalContent extends Component {
           selectedItems={selectedElemets}
           searchValue={searchValue}
           filterValue={filterValue}
-          onChange={event => this.onChangeHendler(event)}
+          onChange={(event) => this.onChangeHendler(event)}
           listBlocked={selectedElemets.length === 3}
         />
         {selectedElemets.length > 0
           ? <p className={styles.text}>Выбранные элементы на данный момент:</p>
-          : <p className={styles.text}>Ещё ни один элемент не выбран</p>
-        }
+          : <p className={styles.text}>Ещё ни один элемент не выбран</p>}
         <SelectedItems
           items={selectedElemets}
           remove={remove}

@@ -5,11 +5,11 @@ import {
   setSelectedItemsAction, saveWidgetAction,
 } from '../../redux/actions/widget';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   selectedItems: state.selectedItems.selected,
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators({
+const mapDispatchToProps = (dispatch) => bindActionCreators({
   setSelectedItemsAction,
   saveWidgetAction,
 }, dispatch);

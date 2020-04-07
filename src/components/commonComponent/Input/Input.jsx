@@ -20,7 +20,7 @@ const Import = ({
         placeholder={placeholder}
         checked={checked}
         className={styles.input}
-        onChange={event => onChangeHendler(event)}
+        onChange={(event) => onChangeHendler(event)}
         onKeyDown={enterPress}
         disabled={disabled}
       />
@@ -31,7 +31,7 @@ const Import = ({
         placeholder={placeholder}
         value={value}
         className={styles.input}
-        onChange={event => onChangeHendler(event)}
+        onChange={(event) => onChangeHendler(event)}
         onKeyDown={enterPress}
       />
     )}

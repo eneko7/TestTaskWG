@@ -1,3 +1,4 @@
+/* eslint-disable react/state-in-constructor */
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
@@ -13,7 +14,7 @@ class SelectedItems extends Component {
   render() {
     const { selectedItems } = this.state;
     const { remove } = this.props;
-    const selected = selectedItems.map(el => (
+    const selected = selectedItems.map((el) => (
       <SelectedItem
         data={el}
         key={el}

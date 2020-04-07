@@ -6,11 +6,11 @@ const Select = ({
   onChangeHendler, value, name, data,
 }) => {
   const options = [];
-  Object.keys(data).forEach(el => options.push(<option key={el} value={el}>{data[el]}</option>));
+  Object.keys(data).forEach((el) => options.push(<option key={el} value={el}>{data[el]}</option>));
   return (
     <select
       name={name}
-      onChange={event => onChangeHendler(event)}
+      onChange={(event) => onChangeHendler(event)}
       value={value}
       className={styles.selectFilter}
       defaultChecked={value}
