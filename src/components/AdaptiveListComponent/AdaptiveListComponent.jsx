@@ -52,16 +52,15 @@ const AdaptiveListComponent = () => {
       </div>
       <div className={styles.selectWrapper}>
         {!openSelect && (
-        <>
+        <div onClick={() => setSelectOpen(!openSelect)}>
           <span className={styles.menuIcon}>&#9776;</span>
           <button
             type="button"
             className={styles.select}
-            onClick={() => setSelectOpen(!openSelect)}
           >
             {list[selectedValue]}
           </button>
-        </>
+        </div>
         )}
         {openSelect && (
           <div className={styles.optionsWrapper} onClick={chooseItem.bind(this)}>

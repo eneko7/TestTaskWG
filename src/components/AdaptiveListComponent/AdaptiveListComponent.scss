@@ -41,6 +41,8 @@
 
 @media(max-width: 801px) {
   .mainContent {
+    width: 90%;
+
     .selectWrapper {
       display: block;
       position: relative;
@@ -53,6 +55,7 @@
         z-index: 20;
         left: 9px;
         top: 5px;
+        cursor: pointer;
       }
 
       .select {

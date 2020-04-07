@@ -23,3 +23,13 @@
     }
   }
 }
+
+@media (max-width: 980px) {
+  .navigation {
+    .navigation_item {
+      .navlink {
+        font-size: 14px;
+      }
+    }
+  }
+}

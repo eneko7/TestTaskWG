@@ -5,3 +5,9 @@
   margin: 0 auto;
   font-family: $font;
 }
+
+@media(max-width: 801px) {
+  .mainContent {
+    width: 90%;
+  }
+}
