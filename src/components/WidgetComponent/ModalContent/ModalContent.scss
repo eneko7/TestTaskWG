@@ -1,0 +1,12 @@
+@import "./src/assets/constants/constants.scss";
+
+.modalContent{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+
+  .text {
+    color: $textWidgetColor;
+    margin-bottom: -10px;
+  }
+}

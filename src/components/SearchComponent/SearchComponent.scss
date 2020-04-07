@@ -1,0 +1,99 @@
+@import "./src/assets/constants/constants.scss";
+
+.mainContent {
+  width: 70%;
+  margin: 0 auto;
+  font-family: $font;
+
+  .wrapperSearchVariant {
+    width: 50%;
+  }
+
+  .wrapperSearch {
+    position: relative;
+    display: flex;
+    width: 50%;
+    margin-bottom: 5px;
+
+    .findIcon {
+      width: 16px;
+      height: 16px;
+      background-image: url(../../assets/images/find_ico.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+    }
+  
+    .searchInput {
+      height: 37px;
+      border: 1px solid rgb(255, 255, 255);
+      border-radius: 3px;
+      box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.11),inset 0px 2px 6px 0px rgba(0, 0, 0, 0.49);
+      font-size: 16px;
+      color: rgb(92, 94, 95);
+      line-height: 1.563;
+      text-align: left;
+      margin-right: 7px;
+      margin-top: 1px;
+      padding-left: 37px;
+      padding-right: 10px;
+      width: 100%;
+      text-overflow: ellipsis;
+
+      &::placeholder{
+        text-overflow: ellipsis;
+      }
+    }
+
+    .searchInput::-webkit-search-cancel-button {
+      position: relative;
+      -webkit-appearance: none;
+      right: -5px;
+      width: 18px;
+      height: 18px;
+      background-image: url(../../assets/images/del_icon.png);
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  
+    .searchInput:focus {
+      outline: none;
+      color: rgb(55, 63, 69);
+      box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.11),inset 0px 2px 6px 0px rgba(0, 0, 0, 0.69);
+    }
+
+    .button {
+      height: 39px;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.44);
+      border-radius: 2px;
+      color: rgb(55, 63, 69);
+      background-image: -moz-linear-gradient( 90deg, rgb(177,181,183) 0%, rgba(177,181,183,0) 100%);
+      background-image: -webkit-linear-gradient( 90deg, rgb(177,181,183) 0%, rgba(177,181,183,0) 100%);
+      background-image: -ms-linear-gradient( 90deg, rgb(177,181,183) 0%, rgba(177,181,183,0) 100%);
+      text-transform: uppercase;
+      padding: 0 18px;
+    }
+
+    .button:hover {
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.44);
+      background-image: -moz-linear-gradient( 90deg, rgb(177,181,183) 0%, rgba(177,181,183,0) 100%);
+      background-image: -webkit-linear-gradient( 90deg, rgb(177,181,183) 0%, rgba(177,181,183,0) 100%);
+      background-image: -ms-linear-gradient( 90deg, rgb(177,181,183) 0%, rgba(177,181,183,0) 100%);
+      color: rgb(0, 0, 0);
+    }
+
+    .button:focus {
+      outline: none;
+    }
+  }
+}
+
+@media(max-width: 801px) {
+  .mainContent {
+    width: 90%;
+  }
+}

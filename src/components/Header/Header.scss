@@ -1,0 +1,15 @@
+@import "./src/assets/constants/constants.scss";
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+@media(max-width: 801px) {
+  .header {
+    width: 90%;
+  }
+}

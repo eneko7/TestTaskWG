@@ -1,0 +1,110 @@
+@import "./src/assets/constants/constants.scss";
+
+*:focus {
+  outline: none;
+}
+
+.mainContent {
+  width: 70%;
+  margin: 0 auto;
+  font-family: $font;
+
+  .selectWrapper {
+    display: none;
+  }
+
+  .listWrapper {
+    display: block;
+
+    .labelRadio {
+      margin-right: 17px;
+
+      cursor: pointer;
+      font-size: 14px;
+      font-family: $font;
+      color: rgb(112, 114, 117);
+      line-height: 1.286;
+    }
+
+    .inputRadio {
+      display: none;
+    }
+
+    .inputRadio:checked+label {
+      padding: 5px 8px;
+      border-radius: 5px;
+      background-color: rgb(112, 114, 117);
+      color: rgb(239, 240, 241);
+    } 
+  }
+}
+
+@media(max-width: 801px) {
+  .mainContent {
+    width: 90%;
+
+    .selectWrapper {
+      display: block;
+      position: relative;
+      width: 170px;
+
+      .menuIcon {
+        font-size: 14px;
+        color: rgb(112, 114, 117);
+        position: absolute;
+        z-index: 20;
+        left: 9px;
+        top: 5px;
+        cursor: pointer;
+      }
+
+      .select {
+        font-size: 14px;
+        font-family: $font;
+        color: rgb(112, 114, 117);
+        line-height: 28px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 1px;
+        opacity: 1;
+        background-image: url(../../assets/images/bg_controls.jpg);
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+        height: 30px;
+        cursor: pointer;
+        width: 100%;
+        padding-left: 30px;
+        text-align: left;
+      }
+
+      .optionsWrapper {
+        padding: 11px 10px 11px 28px;
+        display: flex;
+        flex-direction: column;
+        color: rgb(112, 114, 117);
+        line-height: 25px;
+        font-size: 14px;
+        background-image: url(../../assets/images/bg_controls.jpg);
+        border: 1px solid rgb(255, 255, 255);
+        opacity: 1;
+        border-radius: 1px;
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+
+        .option {
+          cursor: pointer;
+          position: relative;
+        }
+
+        .option:hover::before {
+          position: absolute;
+          content: '\02192';
+          left: -20px;
+          font-size: 14px;
+          top: -1px;
+        }
+      }
+    }
+
+    .listWrapper {
+      display: none;
+    }
+  }
+}

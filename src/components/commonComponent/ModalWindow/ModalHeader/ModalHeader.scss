@@ -1,0 +1,9 @@
+@import "./src/assets/constants/constants.scss";
+
+.modalHeader {
+  color: $textWidgetColor;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+}
