@@ -12,7 +12,6 @@ class ModalContent extends Component {
     searchValue: '',
     filterValue: 'all',
     selectedElemets: this.props.selectedItems,
-
   };
 
   setSearchValue = (value) => {
@@ -79,6 +78,10 @@ class ModalContent extends Component {
           onChange={event => this.onChangeHendler(event)}
           listBlocked={selectedElemets.length === 3}
         />
+        {selectedElemets.length > 0
+          ? <p className={styles.text}>Выбранные элементы на данный момент:</p>
+          : <p className={styles.text}>Ещё ни один элемент не выбран</p>
+        }
         <SelectedItems
           items={selectedElemets}
           remove={remove}

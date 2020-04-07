@@ -30,7 +30,6 @@ class WidgetComponent extends Component {
   saveWidgetData = () => {
     this.setState({
       openWidtget: false,
-      selectedItems: this.state.selectedItems,
     });
     this.props.saveWidgetAction();
   };
@@ -45,8 +44,16 @@ class WidgetComponent extends Component {
     });
   };
 
+  removeElementFromWidget = (elem) => {
+    const { selectedItems } = this.state;
+    const items = selectedItems;
+    items.splice(items.indexOf(elem), 1);
+    this.setState({
+      selectedItems: items,
+    });
+  };
+
   render() {
-    console.log(this.props);
     const { openWidtget, selectedItems } = this.state;
     return (
       <main className={styles.mainContent}>
@@ -76,8 +83,8 @@ class WidgetComponent extends Component {
           saveAction={() => this.saveWidgetData()}
         >
           <ModalContent
-            selectedItems={this.state.selectedItems}
-            remove={elems => this.removeElement(elems)}
+            selectedItems={selectedItems}
+            remove={elems => this.removeElementFromWidget(elems)}
           />
         </ModalWindow>
       </main>

@@ -16,16 +16,6 @@ export const setPreviousSavedItemsAction = items => (dispatch) => {
   dispatch(setPreviousSavedItems(items));
 };
 
-export const resetWidget = createAction(actionTypes.RESET_WIDGET_VALUE);
-export const resetWidgetAction = () => (dispatch, getState) => {
-  const store = getState();
-  const { savedItems: { saved } } = store;
-  console.log(saved);
-  // setSelectedItemsAction(saved);
-  // setSavedItemsAction(saved);
-  // setPreviousSavedItemsAction(saved);
-};
-
 export const saveWidget = createAction(actionTypes.SAVE_WIDGET_VALUE);
 export const saveWidgetAction = () => (dispatch, getState) => {
   const store = getState();
