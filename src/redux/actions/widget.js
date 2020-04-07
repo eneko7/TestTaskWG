@@ -2,17 +2,17 @@ import { createAction } from 'redux-actions';
 import { actionTypes } from './index';
 
 export const setSelectedItems = createAction(actionTypes.SET_SELECTED_ELEMENTS);
-export const setSelectedItemsAction = items => (dispatch) => {
+export const setSelectedItemsAction = (items) => (dispatch) => {
   dispatch(setSelectedItems(items));
 };
 
 export const setSavedItems = createAction(actionTypes.SET_SAVED_ELEMENTS);
-export const setSavedItemsAction = items => (dispatch) => {
+export const setSavedItemsAction = (items) => (dispatch) => {
   dispatch(setSavedItems(items));
 };
 
 export const setPreviousSavedItems = createAction(actionTypes.SET_PREVIOUS_SAVED_ELEMENTS);
-export const setPreviousSavedItemsAction = items => (dispatch) => {
+export const setPreviousSavedItemsAction = (items) => (dispatch) => {
   dispatch(setPreviousSavedItems(items));
 };
 

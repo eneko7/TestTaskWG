@@ -1,3 +1,4 @@
+/* eslint-disable react/state-in-constructor */
 /* eslint-disable react/no-access-state-in-setstate */
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
@@ -68,7 +69,7 @@ class WidgetComponent extends Component {
           ) : (<span>На данный момент у вас не выбрано ни одного элемента.</span>)}
           <SelectedItems
             items={selectedItems}
-            remove={elems => this.removeElement(elems)}
+            remove={(elems) => this.removeElement(elems)}
           />
           <Button
             text="Изменить мой выбор"
@@ -84,7 +85,7 @@ class WidgetComponent extends Component {
         >
           <ModalContent
             selectedItems={selectedItems}
-            remove={elems => this.removeElementFromWidget(elems)}
+            remove={(elems) => this.removeElementFromWidget(elems)}
           />
         </ModalWindow>
       </main>

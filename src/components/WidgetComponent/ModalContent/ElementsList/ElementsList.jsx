@@ -11,13 +11,13 @@ const ElementsList = (props) => {
   } = props;
   const listChecked = objectOfElements();
   let searchedObj = {};
-  Object.keys(listChecked).map(el => listChecked[el] = false);
-  selectedItems.forEach(el => listChecked[el] = true);
+  Object.keys(listChecked).map((el) => listChecked[el] = false);
+  selectedItems.forEach((el) => listChecked[el] = true);
   searchedObj = filter(listChecked, searchValue, filterValue);
   return (
     <div className={styles.elementsList}>
       {Object.keys(searchedObj).length !== 0 ? (
-        Object.keys(searchedObj).map(el => (
+        Object.keys(searchedObj).map((el) => (
           <div className={styles.element} key={el}>
             <Input
               type="checkbox"
